@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="Q3.Views.AdminAddQuestion"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="600" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="210*"/>
+            <RowDefinition Height="35*"/>
+        </Grid.RowDefinitions>
+        <!--<ScrollViewer Grid.Row="0" x:Name="QuestionListSV"  VerticalScrollBarVisibility="Auto">
+                    <StackPanel x:Name="QuestionListSP"></StackPanel>
+                </ScrollViewer>-->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="163*"/>
+                    <RowDefinition Height="180*"/>
+                </Grid.RowDefinitions>
+                <Grid Margin="10" Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="33*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Margin="3" Text="Question" FontSize="20"/>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1">
+                        <RichTextBox x:Name="QuestionContentRTB" Height="Auto" FontSize="20" MinHeight="100"/>
+                    </ScrollViewer>
+                </Grid>
+                <ScrollViewer x:Name="AnswersScrollViewer" Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                    <StackPanel x:Name="AnswersStackPannel" Margin="10">
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+            <Grid Grid.Column="1">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel x:Name="ImagesStackPanel" Margin="0,10,0,0"/>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" x:Name="AddImagesBtn" Content="Add Image" Margin="5" FontSize="20" Click="AddImagesBtnClicked"/>
+            <Button Grid.Column="0" x:Name="AddNewAnswer" Content="Add Answer" Margin="5" FontSize="20" Click="AddNewAnswerBtnClicked"/>
+            <Button Grid.Column="3" x:Name="SaveNewAnswer" Content="Save" Margin="5" FontSize="20" Click="SaveAnswerBtnClicked"/>
+            <Button Grid.Column="2" x:Name="ClearAnswer" Content="Clear" Margin="5" FontSize="20" Click="ClearAnswerBtnClicked"/>
+        </Grid>
+    </Grid>
+</UserControl>
