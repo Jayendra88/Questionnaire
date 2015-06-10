@@ -9,6 +9,7 @@ namespace Questionnaire
     {
         static void Main(string[] args)
         {
+			String s = "";
         }
     }
 }
